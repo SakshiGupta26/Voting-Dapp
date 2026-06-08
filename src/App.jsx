@@ -1,7 +1,7 @@
 import './App.css'
 import { useState } from "react";
 import Web3Provider from "./context/Web3Provider";
-import Dummy from "./Dummy";
+import RegisterCandidate from './pages/Candidate/RegisterCandidate';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -9,7 +9,7 @@ function App() {
   return (
     <>
      <Web3Provider>
-      <Dummy></Dummy>
+      <RegisterCandidate></RegisterCandidate>
      </Web3Provider>
     </>
   )
