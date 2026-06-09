@@ -2,6 +2,7 @@ import {useEffect} from "react";
 import {useWeb3Context} from "../../context/useWeb3Context";
 
 const GetVoterList = () =>{
+    const {web3State} = useWeb3Context()
     const {contractInstance} = useWeb3Context()
 
     useEffect(() =>{
