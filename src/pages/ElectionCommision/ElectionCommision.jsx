@@ -1,7 +1,8 @@
-const ElectionCommisio = () =>{
-    return(
+const ElectionCommission = () => {
+    return (
         <>
         </>
-    )
-}
-export default ElectronCommision;
+    );
+};
+
+export default ElectionCommission;

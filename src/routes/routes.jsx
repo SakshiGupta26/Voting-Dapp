@@ -1,17 +1,54 @@
-import {createBrowserRouter}from "react-router-dom";
-import GetVoterList from"../pages/Voter/GetVoterList";
-import GetCandidate from "../pages/Cnadidate/GetCandidateList";
+import { createBrowserRouter } from "react-router-dom";
+
+import GetVoterList from "../pages/Voter/GetVoterList";
+import GetCandidateList from "../pages/Candidate/GetCandidateList";
 import RegisterCandidate from "../pages/Candidate/RegisterCandidate";
-import RegisterVoter from  "../pages/Voter/RegisterVoter";
-import  ElectionCommision from "../pages/ElectionCommision/ElectionCommision";
-import App from "../App";
+import RegisterVoter from "../pages/Voter/RegisterVoter";
+import ElectionCommision from "../pages/ElectionCommision/ElectionCommision";
 import Wallet from "../components/Wallet/Wallet";
+import Navigation from "../components/Navigation/Navigation";
 
 export const routes = createBrowserRouter([
-    {path:'/',element:<Wallet/>},
-    {path:'register-voter ,element:<RegisterVoter></RegisterVoter>},
-    {path:'register-candidate',element:<RegisterCandidate></RegisterCandidate>},
-    {path:'voter-list',element:<GetVoterList></GetVoterList>},
-    {path:'candidate-list',element:< GetCandidate></GetCandidate>},
-    {path:'election-commision',element:<ElectionCommsion></ElectionCommsion>}
-])
+  {
+    path: "/",
+    element: (<div>
+        <Navigation/>
+        <Wallet />
+        </div>)
+  },
+  {
+    path: "register-voter",
+    element:  (<div>
+        <Navigation/>
+        <RegisterVoter />
+        </div>)
+  },
+  {
+    path: "register-candidate",
+    element: (<div>
+        <Navigation/>
+        <RegisterCandidate />
+        </div>)
+  },
+  {
+    path: "voter-list",
+    element: (<div>
+        <Navigation/>
+        <GetVoterList />
+        </div>)
+  },
+  {
+    path: "candidate-list",
+    element: (<div>
+        <Navigation/>
+        <GetCandidateList/>
+        </div>)
+  },
+  {
+    path: "election-commision",
+    element: (<div>
+        <Navigation/>
+        <ElectionCommision />
+        </div>)
+  },
+]);

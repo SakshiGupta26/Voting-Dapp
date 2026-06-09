@@ -21,3 +21,5 @@ const GetVoterList = () =>{
         </>
     )
 }
+
+export default GetVoterList;

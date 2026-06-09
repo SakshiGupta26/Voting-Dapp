@@ -21,3 +21,5 @@ const GetCandidateList = () =>{
         </>
     )
 }
+
+export default GetCandidateList;
