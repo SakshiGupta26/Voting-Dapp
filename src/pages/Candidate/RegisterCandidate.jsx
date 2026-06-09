@@ -18,7 +18,14 @@ const RegisterCandidate = () => {
                 console.log("Contract not loaded yet");
                 return;
             }
-
+            e.preventDefault = localStorage.getItem("token")
+            const config = {
+                headers:{
+                    "x-access-token":token
+                }
+            }
+            const res = await axios.post("http://localhost:3000/api/postCandidateImage",config)
+            console.log(res.data)
             const name = nameRef.current.value;
             const age = ageRef.current.value;
             const gender = genderRef.current.value;
