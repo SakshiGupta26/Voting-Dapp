@@ -2,6 +2,8 @@ import './App.css'
 import { useState } from "react";
 import Web3Provider from "./context/Web3Provider";
 import RegisterCandidate from './pages/Candidate/RegisterCandidate';
+import {routes} from './routes/routes'
+import { RouterProvider} from 'react-router-dom'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -9,7 +11,7 @@ function App() {
   return (
     <>
      <Web3Provider>
-      <RegisterCandidate></RegisterCandidate>
+      <RouterProvider router={routes}></RouterProvider>
      </Web3Provider>
     </>
   )

@@ -8,7 +8,7 @@ const GetVoterList = () =>{
         const fetchVoterList = async() =>{
             try{
                 const voterList = await contractInstance.getVoterList();
-                console.log(voterLisr)
+                console.log(voterList)
             } catch(error){
                 console.error(error)
             }
